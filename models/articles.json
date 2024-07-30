@@ -1,0 +1,103 @@
+[
+    {
+        "id": "78c1f2a2-90b0-42d3-b1a1-78c36c9b2b4f",
+        "title": "Corsair Vengeance LPX 16GB (2x8GB) DDR4 DRAM 3200MHz C16",
+        "type": "RAM",
+        "brand": "Corsair",
+        "capacity": "16GB (2x8GB)",
+        "speed": "3200MHz",
+        "casLatency": 16,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71TvTi6R4FL._AC_SL1500_.jpg",
+        "price": 89.99,
+        "stock": 50,
+        "rating": 4.8
+    },
+    {
+        "id": "e2a8dbfe-bc1f-4d4d-b20e-67b0e6e22333",
+        "title": "EVGA SuperNOVA 850 G5, 80 Plus Gold 850W, Fully Modular",
+        "type": "Power Supply",
+        "brand": "EVGA",
+        "wattage": "850W",
+        "efficiency": "80 Plus Gold",
+        "modular": "Fully Modular",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61kNEf2xY-L._AC_SL1000_.jpg",
+        "price": 149.99,
+        "stock": 30,
+        "rating": 4.9
+    },
+    {
+        "id": "f2d6d5a7-b8ee-41b3-ae67-4d34e672a7e1",
+        "title": "Samsung 970 EVO Plus SSD 1TB - M.2 NVMe Interface",
+        "type": "Solid State Drive",
+        "brand": "Samsung",
+        "capacity": "1TB",
+        "interface": "M.2 NVMe",
+        "speed": "Sequential Read/Write speeds up to 3500/3300 MB/s",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61p6dbVWtsL._AC_SL1000_.jpg",
+        "price": 159.99,
+        "stock": 20,
+        "rating": 4.7
+    },
+    {
+        "id": "be39f8a3-0a22-4f42-8ab1-20760e48f40f",
+        "title": "AMD Ryzen 7 5800X 8-Core 16-Thread Unlocked Desktop Processor",
+        "type": "CPU",
+        "brand": "AMD",
+        "cores": 8,
+        "threads": 16,
+        "clockSpeed": "3.8GHz (up to 4.7GHz Boost)",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/6160fPgZS7L._AC_SL1384_.jpg",
+        "price": 399.99,
+        "stock": 15,
+        "rating": 4.8
+    },
+    {
+        "id": "c7253a88-d5d6-4198-bf36-51b688fbc266",
+        "title": "ASUS ROG Strix GeForce RTX 3080 10GB GDDR6X Graphics Card",
+        "type": "Graphics Card",
+        "brand": "ASUS",
+        "chipset": "GeForce RTX 3080",
+        "memory": "10GB GDDR6X",
+        "interface": "PCI Express 4.0",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81nzWcu5tFL._AC_SL1500_.jpg",
+        "price": 1499.99,
+        "stock": 10,
+        "rating": 4.9
+    },
+{
+    "id": "fdbb0712-526b-4d88-ae3b-3b9309c9e98a",
+    "title": "Corsair Vengeance LPX 16GB DDR4 RAM",
+    "brand": "Corsair",
+    "category": "RAM",
+    "price": 89.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81Yk7jDZcQL._AC_SL1500_.jpg",
+    "description": "High-performance DDR4 memory module for gaming and overclocking.",
+    "rating": 4.7,
+    "stock": 10,
+    "reviews": 120
+},
+{
+    "id": "e2b184b1-7436-4f29-87a7-bf4fa3c3a4f6",
+    "title": "EVGA Supernova 850 G5, 80 Plus Gold 850W, Fully Modular Power Supply",
+    "brand": "EVGA",
+    "category": "Power Supply",
+    "price": 159.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71bmLLoXjSL._AC_SL1500_.jpg",
+    "description": "High-efficiency power supply unit with fully modular cables for gaming PCs.",
+    "rating": 4.9,
+    "stock": 10,
+    "reviews": 95
+},
+{
+    "id": "a2461594-0e9b-4e5b-b6a3-66cbe6500030",
+    "title": "Samsung 970 EVO Plus 1TB NVMe SSD",
+    "brand": "Samsung",
+    "category": "Solid State Drive",
+    "price": 189.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61z+02F7hxL._AC_SL1500_.jpg",
+    "description": "Ultra-fast NVMe SSD for superior performance and reliability in data storage.",
+    "rating": 4.8,
+    "stock": 10,
+    "reviews": 210
+}
+]

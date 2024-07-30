@@ -1,0 +1,17 @@
+{
+  "name": "coniglio_unidad_2",
+  "version": "1.0.0",
+  "description": " servicios rutas y verbos",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Coniglio",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}
