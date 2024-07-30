@@ -1,5 +1,6 @@
 const articleDBMongo=require("../models/MongoDB/articles.js");
 const {generateArticlesHtml}= require("../Functions/html.js");
+const mongoose = require("mongoose");
 
 async function getAllArticles(req, res) {
     try{
@@ -40,6 +41,9 @@ async function getAllArticles(req, res) {
 async function articleForId(req, res) {
     try {
       const articleId = req.params.articleId;
+      if(!mongoose.Types.ObjectId.isValid(articleId)){
+        return res.status(400).json({ success: false, message: "Invalid ID format" });
+      }
       const findArticle = await articleDBMongo.findById(articleId);
       
       if (findArticle) {
@@ -50,6 +54,23 @@ async function articleForId(req, res) {
     } catch (error) {
       res.status(500).json({ success: false, message: "Error searching for Article", error: error.message });
     }
+};
+async function articleForTitle(req, res) {
+  try {
+    const {title}  = req.query;
+    if(!title){
+      return res.status(400).json({ success: false, message: "Missing title query params" });
+    }
+    const findArticle = await articleDBMongo.findOne({title: title});
+    
+    if (findArticle) {
+      return res.status(200).json({ success: true, message: "Found Article", data: findArticle });
+    } else {
+      return res.status(404).json({ success: false, message: "Article not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Error searching for Article", error: error.message });
+  }
 };
 async function updateForId(req, res) {
     try {
@@ -91,4 +112,4 @@ async function deleteForId(req, res) {
     }
 };
 
-module.exports = { getAllArticles, createArticle, articleForId, updateForId, deleteForId };
+module.exports = { getAllArticles, createArticle, articleForTitle, articleForId, updateForId, deleteForId };

@@ -70,7 +70,7 @@ const articleSchema = mongoose.Schema({
     clockSpeed: { 
         type: String,
         default: null
-    },
+    }
 });
 
 const articlesDBMongo = mongoose.model("Articles", articleSchema);

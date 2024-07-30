@@ -18,6 +18,6 @@ app.listen(PORT,(err)=>{
     )
 });
 
-app.use("/", articlesRouters);
+app.use("/api/articles", articlesRouters);
 app.use("/api/users", userRouters);
 

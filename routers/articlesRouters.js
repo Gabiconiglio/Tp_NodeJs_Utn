@@ -16,8 +16,11 @@ articlesRouters.get("/all", async (req, res) => {
     }
 });
 
+
+//Articulo por Titulo
+  articlesRouters.get("/search/title/",articlesController.articleForTitle);
 //Articulo por ID
-  articlesRouters.get("/search/:articleId",articlesController.articleForId);
+  articlesRouters.get("/search/id/:articleId",articlesController.articleForId);
 //Creaciación del articulo
   articlesRouters.post("/createArticle",(req,res)=>res.send(articlesController.createArticle(req,res)));
 //Modificación del articulo
