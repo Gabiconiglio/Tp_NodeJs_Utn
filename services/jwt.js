@@ -10,7 +10,6 @@ async function generateJWT(user){
 };
 async function verifyJWT(req,res, next){
     const authorizationHeader = req.headers?.authorization;
-
     if (!authorizationHeader || !authorizationHeader.startsWith("Bearer ")) {
         return res.status(401).json({ message: "Not authorized" });
     }
