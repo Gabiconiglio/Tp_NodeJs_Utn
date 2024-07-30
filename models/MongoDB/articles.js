@@ -70,8 +70,16 @@ const articleSchema = mongoose.Schema({
     clockSpeed: { 
         type: String,
         default: null
-    }
-});
+    }},
+    {timestamps:true}
+);
+
+articleSchema.index({title:"text"});
+articleSchema.set("toJSON",{
+    transform(doc,ret){
+    ret.id=ret._id;
+    delete ret._id;
+    delete ret.__v;}})
 
 const articlesDBMongo = mongoose.model("Articles", articleSchema);
 

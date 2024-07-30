@@ -1,7 +1,7 @@
 const express=require("express");
 const articlesRouters=express.Router();
 const articlesController=require("../controllers/articlesControllers.js");
-
+const token= require("../services/jwt.js");
 //Todas los Articulos
 articlesRouters.get("/all", async (req, res) => {
     try {
@@ -20,7 +20,7 @@ articlesRouters.get("/all", async (req, res) => {
 //Articulo por Titulo
   articlesRouters.get("/search/title/",articlesController.articleForTitle);
 //Articulo por ID
-  articlesRouters.get("/search/id/:articleId",articlesController.articleForId);
+  articlesRouters.get("/search/id/:articleId",token.verifyJWT,articlesController.articleForId);
 //Creaciación del articulo
   articlesRouters.post("/createArticle",(req,res)=>res.send(articlesController.createArticle(req,res)));
 //Modificación del articulo
