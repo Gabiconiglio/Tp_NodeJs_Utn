@@ -6,7 +6,7 @@ async function generateJWT(user){
 	fullName:user.fullName,
     email:user.email
 	};
-    return await jwt.sign(userForToken,JWT_SECRET,{expiresIn: "10min"});
+    return await jwt.sign(userForToken,JWT_SECRET,{expiresIn: "5min"});
 };
 async function verifyJWT(req,res, next){
     const authorizationHeader = req.headers?.authorization;

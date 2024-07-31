@@ -3,20 +3,46 @@ const mongoose= require("mongoose");
 const userSchema= mongoose.Schema({
     fullName:{
         type:String,
-        require:true,
+        required:true,
         trim:true
     },
     email:{
         type:String,
-        require:true,
+        required:true,
         unique:true
     },
     password:{
         type:String,
-        require:true,
+        required:true,
+        trim:true
+    },
+    rol:{
+        type:String,
+        required:true,
         trim:true
     }},
 {timestamps:true});
+
+userSchema.pre('save', function(next) {
+    if (this.rol) {
+        this.rol = this.rol.toLowerCase();
+    }
+    if (this.email) {
+        this.email = this.email.toLowerCase();
+    }
+    next();
+});
+
+userSchema.pre('findOneAndUpdate', function(next) {
+    const update = this.getUpdate();
+    if (update.rol) {
+        update.rol = update.rol.toLowerCase();
+    }
+    if (update.email) {
+        update.email = update.email.toLowerCase();
+    } 
+    next();
+});
 
 userSchema.set("toJSON",{
     transform(doc,ret){

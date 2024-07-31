@@ -1,8 +1,9 @@
 const express=require("express");
-const articlesRouters=express.Router();
 const articlesController=require("../controllers/articlesControllers.js");
 const token= require("../services/jwt.js");
-//Todas los Articulos
+const articlesRouters=express.Router();
+
+//Todos los Articulos
 articlesRouters.get("/all", async (req, res) => {
     try {
       const response = await articlesController.getAllArticles(req, res);
@@ -20,13 +21,13 @@ articlesRouters.get("/all", async (req, res) => {
 //Articulo por Titulo
   articlesRouters.get("/search/title/",articlesController.articleForTitle);
 //Articulo por ID
-  articlesRouters.get("/search/id/:articleId",token.verifyJWT,articlesController.articleForId);
+  articlesRouters.get("/search/id/:articleId",articlesController.articleForId);
 //Creaciación del articulo
-  articlesRouters.post("/createArticle",(req,res)=>res.send(articlesController.createArticle(req,res)));
+  articlesRouters.post("/createArticle",token.verifyJWT,articlesController.createArticle);
 //Modificación del articulo
-  articlesRouters.put("/update/:articleId",articlesController.updateForId);
+  articlesRouters.put("/update/:articleId",token.verifyJWT,articlesController.updateForId);
 //Eliminación del articulo
-  articlesRouters.delete("/delete/:articleId", articlesController.deleteForId);
+  articlesRouters.delete("/delete/:articleId",token.verifyJWT, articlesController.deleteForId);
 
 
 module.exports=articlesRouters;

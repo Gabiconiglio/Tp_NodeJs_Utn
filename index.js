@@ -1,7 +1,7 @@
 const express=require("express");
-const app=express();
 const dotEnv = require("dotenv").config();
 const db = require("./config/db.js");
+const app=express();
 const PORT= process.env.PORT ?? 3000;
 
 app.use(express.urlencoded({ extended: true }));
@@ -9,7 +9,6 @@ app.use(express.json());
 
 const articlesRouters=require("./routers/articlesRouters.js")
 const userRouters=require("./routers/userRouters.js")
-
 
 app.listen(PORT,(err)=>{
     console.log(err?`Error initializing server ${err.message}`
